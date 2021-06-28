@@ -10,3 +10,6 @@
 [submodule "src/turtlebot_simulator"]
 	path = src/turtlebot_simulator
 	url = https://github.com/turtlebot/turtlebot_simulator
+[submodule "src/my_robot"]
+	path = src/my_robot
+	url = https://github.com/daniel-m-campos/my_robot.git
