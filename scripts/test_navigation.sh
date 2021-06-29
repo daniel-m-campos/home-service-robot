@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source devel/setup.sh
+
 echo launching turtlebot in HolidayCondo;
 xterm -e "source devel/setup.bash;
 export ROBOT_INITIAL_POSE='-x -1.2 -y -3.0 -z -0.1 -R 0 -P 0 -Y 0';
