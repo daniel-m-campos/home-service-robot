@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 C='\033[0;36m'
 NC='\033[0m'
 VERSION=$(rosversion -d)
