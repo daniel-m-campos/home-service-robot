@@ -13,3 +13,6 @@
 [submodule "src/my_robot"]
 	path = src/my_robot
 	url = https://github.com/daniel-m-campos/my_robot.git
+[submodule "src/pick_objects"]
+	path = src/pick_objects
+	url = https://github.com/daniel-m-campos/pick_objects.git
