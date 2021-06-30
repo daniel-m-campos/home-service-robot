@@ -17,3 +17,6 @@
 [submodule "src/pick_objects"]
 	path = src/pick_objects
 	url = https://github.com/daniel-m-campos/pick_objects.git
+[submodule "src/add_markers"]
+	path = src/add_markers
+	url = https://github.com/daniel-m-campos/add_markers.git
