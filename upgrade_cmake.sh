@@ -8,8 +8,7 @@ wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null \
  | sudo tee /etc/apt/trusted.gpg.d/kitware.gpg \
  >/dev/null
 
-echo -e "${C}Add kitware's repository to your sources list. Assuming
-Xenial${NC}"
+echo -e "${C}Add kitware's repository to your sources list. Assuming Xenial${NC}"
 
 sudo apt-add-repository -y 'deb https://apt.kitware.com/ubuntu/ xenial main'
 sudo apt update -y
