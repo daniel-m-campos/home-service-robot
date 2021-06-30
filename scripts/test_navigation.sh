@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source devel/setup.sh
+. devel/setup.sh
 
 echo launching turtlebot in HolidayCondo;
 xterm -e "source devel/setup.bash;
@@ -22,6 +22,7 @@ roslaunch turtlebot_rviz_launchers view_navigation.launch" &
 sleep 10
 
 echo publishing initial pose estimate;
-cd scripts
-source publish_pose.sh
-cd ..
+(
+cd scripts || exit
+. publish_pose.sh
+)
