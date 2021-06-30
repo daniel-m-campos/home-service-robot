@@ -10,7 +10,7 @@ roslaunch turtlebot_gazebo turtlebot_world.launch  world_file:=$(rospack find my
 sleep 10
 
 echo launching amcl demo;
-xterm -e "cd source devel/setup.bash;
+xterm -e "source devel/setup.bash;
 roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$(rospack find my_robot)/maps/map.yaml " &
 
 sleep 5
