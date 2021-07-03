@@ -30,7 +30,7 @@ rosrun dynamic_reconfigure dynparam set /amcl update_min_d 0;
 rosrun dynamic_reconfigure dynparam set /amcl update_min_a 0;
 rosrun add_markers add_markers_node" &
 
-sleep 3
+sleep 10
 
 echo sending pickup goals
 xterm -e "source devel/setup.bash;
