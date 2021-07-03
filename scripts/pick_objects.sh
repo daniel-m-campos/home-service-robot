@@ -22,11 +22,9 @@ sleep 10
 echo publishing initial pose estimate
 xterm -e "source devel/setup.sh;
 cd scripts;
-source publish_pose.sh;
-"
+source publish_pose.sh" &
 
 echo sending pickup goals
 xterm -e "source devel/setup.bash;
-rosrun pick_objects pick_objects_node;
-"
+rosrun pick_objects pick_objects_node" &
 
