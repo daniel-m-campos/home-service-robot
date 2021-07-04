@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 echo launching turtlebot in HolidayCondo
 xterm -e "source devel/setup.bash;
 export ROBOT_INITIAL_POSE='-x -1.2 -y -3.0 -z -0.1 -R 0 -P 0 -Y 0';
@@ -20,5 +19,5 @@ sleep 10
 echo publishing initial pose estimate
 (
 cd scripts || exit
-. publish_pose.sh
+rostopic pub --once /initialpose geometry_msgs/PoseWithCovarianceStamped -f initial_pose.yaml
 )
