@@ -13,31 +13,30 @@ sleep 5
 
 echo launching rviz navigation with markers
 xterm -e "source devel/setup.bash;
-rosrun rviz rviz -d rviz_config/navigation.rviz" &
+rosrun rviz rviz -d rviz_config/add_markers.rviz" &
 sleep 10
 
 echo publishing initial pose estimate
 (
 cd scripts || exit
-rostopic pub --once /initialpose geometry_msgs/PoseWithCovarianceStamped -f initial_pose.yaml
+rostopic pub --once /initialpose geometry_msgs/PoseWithCovarianceStamped -f initial_pose.yaml > /dev/null
 )
 
 echo adding markers
 xterm -e "source devel/setup.bash;
+rosparam set not_moving_threshold 0;
 rosrun add_markers add_markers_node" &
 sleep 5
 
 echo publishing psuedo initial amcl_pose
 (
 cd scripts || exit
-rostopic pub --once /amcl_pose geometry_msgs/PoseWithCovarianceStamped -f initial_pose.yaml
+rostopic pub --once /amcl_pose geometry_msgs/PoseWithCovarianceStamped -f initial_marker_pose.yaml > /dev/null
 sleep 5
 
-echo publishing psuedo final amcl_pose at 10Hz
-while true
-  do
-    rostopic pub --once /amcl_pose geometry_msgs/PoseWithCovarianceStamped -f final_pose.yaml
-    sleep 0.1
-  done
+echo publishing psuedo final amcl_pose to move marker
+for _ in {1..2}; do
+rostopic pub --once /amcl_pose geometry_msgs/PoseWithCovarianceStamped -f final_marker_pose.yaml > /dev/null
+done
 )
 
