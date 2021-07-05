@@ -22,7 +22,7 @@ cd scripts || exit
 rostopic pub --once /initialpose geometry_msgs/PoseWithCovarianceStamped -f initial_pose.yaml
 )
 
-echo setting \\amcl\\update_min_\{a,d\} to zero
+echo setting \\"amcl"\\update_min_\{a,d\} to zero
 rosrun dynamic_reconfigure dynparam set /amcl update_min_d 0;
 rosrun dynamic_reconfigure dynparam set /amcl update_min_a 0;
 
