@@ -13,7 +13,7 @@ sleep 5
 
 echo launching rviz navigation with markers
 xterm -e "source devel/setup.bash;
-rosrun rviz rviz -d rviz_config/navigation.rviz" &
+rosrun rviz rviz -d rviz_config/home_service.rviz" &
 sleep 10
 
 echo publishing initial pose estimate
