@@ -11,9 +11,9 @@ xterm -e "source devel/setup.bash;
 roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$(rospack find my_robot)/maps/map.yaml " &
 sleep 5
 
-echo launching rviz view_navigation
+echo launching rviz navigation with markers
 xterm -e "source devel/setup.bash;
-roslaunch turtlebot_rviz_launchers view_navigation.launch" &
+rosrun rviz rviz -d rviz_config/test_navigation.rviz" &
 sleep 10
 
 echo publishing initial pose estimate
