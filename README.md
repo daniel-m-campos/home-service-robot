@@ -137,16 +137,3 @@ home-service-robot
 ├── README.md
 └── upgrade_cmake.sh
 ```
-
-### Build the workspace
-```sh
-$ cd <path-to-repo-workspace>/<repo-name>/src
-$ catkin_init_workspace
-$ cd ..
-$ catkin_make
-```
-
-### Running
-
-
-### Source Structure
