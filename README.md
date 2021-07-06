@@ -2,7 +2,7 @@
 
 ### Demo
 
-![](img/home_service.gif "Home servicing example")
+<p align="center"><img src="img/home_service.gif"></p>
 
 ## Goal
 
@@ -54,8 +54,7 @@ cd <path-to-repo-workspace>/home-service-robot
 source devel/setup.sh
 ./scripts/test_slam.sh
 ```
-
-![](img/test_slam.png)
+<p align="center"><img src="img/test_slam.png"></p>
 
 #### Testing Navigation
 
@@ -64,8 +63,7 @@ cd <path-to-repo-workspace>/home-service-robot
 source devel/setup.sh
 ./scripts/test_navigation.sh
 ```
-
-![](img/test_navigation.png)
+<p align="center"><img src="img/test_navigation.png"></p>
 
 #### Picking Objects
 
@@ -75,7 +73,7 @@ source devel/setup.sh
 ./scripts/pick_objects.sh
 ```
 
-![](img/pick_objects.gif)
+<p align="center"><img src="img/pick_objects.png"></p>
 
 #### Adding Markers
 
@@ -85,7 +83,7 @@ source devel/setup.sh
 ./scripts/add_markers.sh
 ```
 
-![](img/add_markers.png "Red marker final pose in map")
+<p align="center"><img src="img/add_markers.png"></p>
 
 #### Home Servicing
 
@@ -94,8 +92,7 @@ cd <path-to-repo-workspace>/home-service-robot
 source devel/setup.sh
 ./scripts/home_service.sh
 ```
-
-![](img/home_service.png)
+<p align="center"><img src="img/home_service.png"></p>
 
 ### Directory Tree
 
