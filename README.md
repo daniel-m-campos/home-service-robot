@@ -73,7 +73,7 @@ source devel/setup.sh
 ./scripts/pick_objects.sh
 ```
 
-<p align="center"><img src="img/pick_objects.png"></p>
+<p align="center"><img src="img/pick_objects.gif"></p>
 
 #### Adding Markers
 
